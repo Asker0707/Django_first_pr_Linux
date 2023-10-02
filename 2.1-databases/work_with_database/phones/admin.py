@@ -1,4 +1,9 @@
 from django.contrib import admin
+from .models import Phone
 
-list_display = ['id', 'name', 'image', 'price', 'release_date','lte_exists',]
-list_filter = ['name', 'price',]
+@admin.register(Phone)
+class PhoneAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'image', 'price', 'release_date','lte_exists',]
+    list_filter = ['name', 'price',]
+
+
