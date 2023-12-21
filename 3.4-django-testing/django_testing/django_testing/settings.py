@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_filters',
 
     'students',
+    'django_testing',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +84,8 @@ DATABASES = {
         'NAME': 'netology_django_testing',
         'HOST': '127.0.0.1',
         'PORT': '5432',
+        'PASSWORD': 'superuser',
+        'USER': 'postgres'
     }
 }
 
@@ -124,3 +127,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {'TEST_REQUEST_DEFAULT_FORMAT': 'json'}
